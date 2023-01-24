@@ -5,6 +5,7 @@ import { PhotoCamera } from '@mui/icons-material';
 
 
 
+
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <CssBaseline />
       <AppBar position='relative'>
         <Toolbar>
-          <PhotoCamera />
+          <PhotoCamera sx={{marginRight: '5px'}} />
           <Typography variant='h6'>
             Bikoz photo gallery...
           </Typography>
