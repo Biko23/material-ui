@@ -1,10 +1,25 @@
 import { Card, CardActions, CardContent, CardMedia, Container, Grid, Typography, Button } from "@mui/material"
+import { useDispatch, useSelector } from "react-redux";
+import { addNewCards } from "../store/cardsSlice";
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+// const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 function PhotoAlbum() {
+    const {cards} = useSelector(state => state.cards );
+    const dispatch = useDispatch();
     return (
         <div>
+
             <Container>
+                <Grid container spacing={2}>
+                    <Grid item>
+                        <Button
+                        onClick={() => dispatch(addNewCards())}
+                        variant="contained"
+                        color="primary">
+                            Add Cards
+                        </Button>
+                    </Grid>
+                </Grid>
                 <Grid container sx={{ paddingTop: 2  }} spacing={4} >
                 {cards.map((card) => (
                 <Grid item key={card} xs={12} sm={6} md={4} >

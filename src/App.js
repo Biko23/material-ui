@@ -5,6 +5,7 @@ import { PhotoCamera } from '@mui/icons-material';
 
 import { Route, Routes } from 'react-router-dom';
 import PhotoAlbum from './pages/photoAlbum';
+import UserRegistration from './pages/userRegistration';
 
 
 
@@ -23,6 +24,7 @@ function App() {
       <main>
         <Routes>
           <Route path='/' element={<PhotoAlbum />} />
+          <Route path='/user-registration' element={<UserRegistration />} />
         </Routes>
       </main>
     </>
